@@ -1,13 +1,10 @@
 <script setup>
 import DefaultLayout from "@/layout/DefaultLayout.vue";
+import HeroComponent from "@/components/hero/HeroComponent.vue";
 </script>
 
 <template>
   <DefaultLayout>
- Hello
+    <HeroComponent/>
   </DefaultLayout>
 </template>
-
-<style scoped>
-
-</style>
