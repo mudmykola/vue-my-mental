@@ -12,10 +12,9 @@ import HeaderTherapistButtonComponent from "@/components/header/HeaderTherapistB
         <HeaderLogo/>
         <HeaderNavigation/>
         <div class="header-navigation__inner--user flex items-center gap-5">
-          <HeaderAuthComponent/>
+          <HeaderAuthComponent class="cursor-pointer" label="Увійти"/>
           <HeaderTherapistButtonComponent/>
         </div>
-
       </div>
     </div>
   </div>

@@ -2,13 +2,13 @@
   <div class="header-menu">
     <ul class="flex items-center gap-5">
       <li v-for="item in menuItems" :key="item.title" @mouseenter="showDropdown(item)" @mouseleave="hideDropdown(item)">
-        <a :href="item.link">{{ item.title }}</a>
-        <span v-if="item.title === 'Спеціалістам'" class="menu-icon" :class="{ 'rotate-180': item.isDropdownVisible }">
+        <a class="text-[14px] text-primary font-bold font-sans" :href="item.link">{{ item.title }}</a>
+        <span v-if="item.title === 'Спеціалістам'" class="menu-icon ml-1 transition-transform duration-300 ease" :class="{ 'rotate-180': item.isDropdownVisible }">
           <IconAngelDown/>
-</span>
+        </span>
         <ul v-if="item.isDropdownVisible" class="dropdown-menu ">
           <li class="w-full px-4" v-for="subItem in item.submenu" :key="subItem.title">
-            <a :href="subItem.link">{{ subItem.title }}</a>
+            <a class="text-[14px] text-primary font-bold font-sans" :href="subItem.link">{{ subItem.title }}</a>
           </li>
         </ul>
       </li>
