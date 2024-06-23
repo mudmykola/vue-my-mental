@@ -1,13 +1,15 @@
 <script setup>
-
+import HeaderLogo from "@/components/header/HeaderLogoComponent.vue";
+import HeaderNavigation from "@/components/header/HeaderNavigationComponent.vue";
 </script>
 
 <template>
-<div class="bg-c102 container mx-auto font-sans font-bold uppercase pt-1.5">
-  Dev
+<div class="header-navigation">
+  <div class="container">
+<div class="header-navigation__inner">
+    <HeaderLogo/>
+<HeaderNavigation/>
+  </div>
+</div>
 </div>
 </template>
-
-<style scoped>
-
-</style>
