@@ -1,7 +1,7 @@
 <template>
   <div class="header-menu">
     <ul class="flex items-center gap-5">
-      <li v-for="item in menuItems" :key="item.title" @mouseenter="showDropdown(item)" @mouseleave="hideDropdown(item)">
+      <li class="header-menu__item" v-for="item in menuItems" :key="item.title" @mouseenter="showDropdown(item)" @mouseleave="hideDropdown(item)">
         <a class="text-[14px] text-primary font-bold font-sans" :href="item.link">{{ item.title }}</a>
         <span v-if="item.title === 'Спеціалістам'" class="menu-icon ml-1 transition-transform duration-300 ease" :class="{ 'rotate-180': item.isDropdownVisible }">
           <IconAngelDown/>
@@ -61,7 +61,32 @@ function hideDropdown(item) {
 }
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+.header-menu{
+  &__item{
+    a{
+      position: relative;
+    }
+    a:nth-child(0)::after {
+
+      height: 0;
+    }
+    a::after{
+      position: absolute;
+      content: '';
+      width: 0;
+      height: 1px;
+      left: 0;
+      bottom: -1px;
+      background-color: #000;
+      transition: width 0.3s;
+    }
+    a:hover::after{
+      width: 100%;
+      transition: width 0.4s;
+    }
+  }
+}
 .menu-icon {
   margin-left: 4px;
   transition: transform 0.3s ease;
@@ -79,6 +104,27 @@ function hideDropdown(item) {
   padding: 8px 0;
   z-index: 1000;
   display: none;
+  a{
+    position: relative;
+  }
+  a:nth-child(0)::after {
+
+    height: 0;
+  }
+  a::after{
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 1px;
+    left: 0;
+    bottom: -1px;
+    background-color: #000;
+    transition: width 0.3s;
+  }
+  a:hover::after{
+    width: 100%;
+    transition: width 0.4s;
+  }
 }
 
 .header-menu li:hover .dropdown-menu {
