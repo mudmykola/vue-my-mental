@@ -13,7 +13,7 @@ import HeaderTherapistButtonComponent from "@/components/header/HeaderTherapistB
         <HeaderNavigation/>
         <div class="header-navigation__inner--user flex items-center gap-5">
           <HeaderAuthComponent class="cursor-pointer" label="Увійти"/>
-          <HeaderTherapistButtonComponent/>
+          <HeaderTherapistButtonComponent class="cursor-pointer" btn-text="Підібрати психотерапевта" btn-url="/find-therapist" />
         </div>
       </div>
     </div>
