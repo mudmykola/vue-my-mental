@@ -1,7 +1,26 @@
-<script setup>
-import { reactive } from 'vue';
+<template>
+  <div class="header-menu">
+    <ul class="flex items-center gap-5">
+      <li v-for="item in menuItems" :key="item.title" @mouseenter="showDropdown(item)" @mouseleave="hideDropdown(item)">
+        <a :href="item.link">{{ item.title }}</a>
+        <span v-if="item.title === 'Спеціалістам'" class="menu-icon" :class="{ 'rotate-180': item.isDropdownVisible }">
+          <IconAngelDown/>
+</span>
+        <ul v-if="item.isDropdownVisible" class="dropdown-menu ">
+          <li class="w-full px-4" v-for="subItem in item.submenu" :key="subItem.title">
+            <a :href="subItem.link">{{ subItem.title }}</a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</template>
 
-const menuItems = reactive([
+<script setup>
+import {ref} from 'vue';
+import IconAngelDown from "@/components/icons/IconAngelDown.vue";
+
+const menuItems = ref([
   {
     title: 'Про нас',
     link: '/about',
@@ -17,29 +36,52 @@ const menuItems = reactive([
     link: '/specialists',
     isDropdownVisible: false,
     submenu: [
-      { title: 'Пункт 1', link: '/specialists/item1' },
-      { title: 'Пункт 2', link: '/specialists/item2' },
-      { title: 'Пункт 3', link: '/specialists/item3' },
+      {
+        title: 'Медицина',
+        link: '/specialists/medicine',
+      },
+      {
+        title: 'Техніка',
+        link: '/specialists/tech',
+      },
+      {
+        title: 'Право',
+        link: '/specialists/law',
+      }
     ],
-  },
+  }
 ]);
 
-const toggleDropdown = (item) => {
-  item.isDropdownVisible = !item.isDropdownVisible;
-};
+function showDropdown(item) {
+  item.isDropdownVisible = true;
+}
+
+function hideDropdown(item) {
+  item.isDropdownVisible = false;
+}
 </script>
 
-<template>
-  <div class="header-menu">
-    <ul>
-      <li v-for="item in menuItems" :key="item.title" @click="toggleDropdown(item)" @mouseleave="item.isDropdownVisible = false">
-        <a :href="item.link">{{ item.title }}</a>
-        <ul v-if="item.submenu && item.isDropdownVisible" class="dropdown-menu">
-          <li v-for="subItem in item.submenu" :key="subItem.title">
-            <a :href="subItem.link">{{ subItem.title }}</a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</template>
+<style scoped>
+.menu-icon {
+  margin-left: 4px;
+  transition: transform 0.3s ease;
+  display: inline-block;
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+  padding: 8px 0;
+  z-index: 1000;
+  display: none;
+}
+
+.header-menu li:hover .dropdown-menu {
+  display: block;
+}
+</style>
