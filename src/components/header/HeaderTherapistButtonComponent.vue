@@ -17,6 +17,6 @@ const props = defineProps({
 
 <template>
 <div class="therapist">
-  <a class="therapist-link bg-primary rounded-[12px] p-[18px] text-white font-sans font-bold text-[14px]" :href="btnUrl">{{ btnText }}</a>
+  <a class="therapist-link bg-primary rounded-[12px] p-[18px] text-white font-sans font-bold text-[14px]  hover:bg-[#0E352F] transition-all duration-300" :href="btnUrl">{{ btnText }}</a>
 </div>
 </template>

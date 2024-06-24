@@ -1,5 +1,5 @@
 <script setup>
-import heroBg from '/public/images/hero-bg.png';
+import heroBg from '/images/hero-bg.png';
 
 const props = defineProps({
   altText: {
