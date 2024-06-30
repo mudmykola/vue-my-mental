@@ -6,7 +6,7 @@ import HeroImageComponent from "@/components/hero/HeroImageComponent.vue";
 <template>
   <div class="hero mt-[58px]">
     <div class="container">
-      <div class="hero-inner flex justify-between">
+      <div class="hero-inner flex justify-between pb-[90px]">
         <div class="hero-inner__text">
           <HeroTextComponent/>
         </div>
@@ -17,7 +17,3 @@ import HeroImageComponent from "@/components/hero/HeroImageComponent.vue";
     </div>
   </div>
 </template>
-
-<style scoped lang="scss">
-
-</style>
