@@ -1,30 +1,30 @@
 <script setup>
-import { ref } from 'vue';
+import { ref } from "vue";
 
 const generateRandomNumber = (min, max) => {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 };
 
 const statisticsData = ref([
-  {
-    description: 'В MyMental зараз',
-    value: generateRandomNumber(1000, 3000),
-    unit: 'фахівців'
-  },
-  {
-    description: 'Знайшли своїх ідеальних психологів',
-    value: generateRandomNumber(100000, 300000),
-    unit: 'клієнтів'
-  },
-  {
-    description: 'Відбувається прямо зараз',
-    value: generateRandomNumber(100, 1000),
-    unit: 'сеансів'
-  }
+	{
+		description: "В MyMental зараз",
+		value: generateRandomNumber(1000, 3000),
+		unit: "фахівців",
+	},
+	{
+		description: "Знайшли своїх ідеальних психологів",
+		value: generateRandomNumber(100000, 300000),
+		unit: "клієнтів",
+	},
+	{
+		description: "Відбувається прямо зараз",
+		value: generateRandomNumber(100, 1000),
+		unit: "сеансів",
+	},
 ]);
 
 const formatNumberWithCommas = (number) => {
-  return number.toLocaleString('uk-UA');
+	return number.toLocaleString("uk-UA");
 };
 </script>
 
@@ -68,5 +68,4 @@ const formatNumberWithCommas = (number) => {
     bottom: 25%;
   }
 }
-
 </style>

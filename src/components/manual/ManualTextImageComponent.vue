@@ -1,27 +1,27 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from "vue";
 
 const props = defineProps({
-  textTitle: {
-    type: String,
-    required: true
-  },
-  textDesc: {
-    type: String,
-    required: true
-  },
-  imgSrc: {
-    type: String,
-    required: true
-  },
-  imgAlt: {
-    type: String,
-    required: true
-  },
-  reverse: {
-    type: Boolean,
-    default: false
-  }
+	textTitle: {
+		type: String,
+		required: true,
+	},
+	textDesc: {
+		type: String,
+		required: true,
+	},
+	imgSrc: {
+		type: String,
+		required: true,
+	},
+	imgAlt: {
+		type: String,
+		required: true,
+	},
+	reverse: {
+		type: Boolean,
+		default: false,
+	},
 });
 </script>
 

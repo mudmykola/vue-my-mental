@@ -1,20 +1,19 @@
-import { createApp } from 'vue';
-import App from './App.vue';
-import router from './router';
-import AOS from 'aos';
-import 'aos/dist/aos.css';
+import AOS from "aos";
+import { createApp } from "vue";
+import App from "./App.vue";
+import router from "./router";
+import "aos/dist/aos.css";
 import BaseButton from "@/components/ui/BaseButton.vue";
-import './assets/index.css';
+import "./assets/index.css";
 
-AOS.init({
-});
+AOS.init({});
 
 const app = createApp(App);
 
 app.use(router);
-app.component('BaseButton', BaseButton);
-app.mount('#app');
+app.component("BaseButton", BaseButton);
+app.mount("#app");
 
 router.afterEach(() => {
-    AOS.refresh();
+	AOS.refresh();
 });

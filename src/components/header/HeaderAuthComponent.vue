@@ -1,14 +1,14 @@
 <script setup>
-import { defineProps } from 'vue';
 import IconUser from "@/components/icons/IconUser.vue";
+import { defineProps } from "vue";
 
 const props = defineProps({
-  label: {
-    type: String,
-    required: true,
-    default: 'Увійти'
-  }
-})
+	label: {
+		type: String,
+		required: true,
+		default: "Увійти",
+	},
+});
 </script>
 
 <template>

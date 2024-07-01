@@ -1,6 +1,6 @@
 <script setup>
-import HeroTextComponent from "@/components/hero/HeroTextComponent.vue";
 import HeroImageComponent from "@/components/hero/HeroImageComponent.vue";
+import HeroTextComponent from "@/components/hero/HeroTextComponent.vue";
 </script>
 
 <template>

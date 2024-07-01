@@ -1,7 +1,7 @@
 <script setup>
+import HeaderAuthComponent from "@/components/header/HeaderAuthComponent.vue";
 import HeaderLogo from "@/components/header/HeaderLogoComponent.vue";
 import HeaderNavigation from "@/components/header/HeaderNavigationComponent.vue";
-import HeaderAuthComponent from "@/components/header/HeaderAuthComponent.vue";
 import HeaderTherapistButtonComponent from "@/components/header/HeaderTherapistButtonComponent.vue";
 </script>
 

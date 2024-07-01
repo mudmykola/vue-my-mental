@@ -12,41 +12,41 @@
 </template>
 
 <script setup>
-import { computed } from 'vue';
-import { useAttrs } from 'vue';
+import { computed } from "vue";
+import { useAttrs } from "vue";
 
 const props = defineProps({
-  text: {
-    type: String,
-    required: true,
-    default: 'Кнопка'
-  },
-  type: {
-    type: String,
-    default: 'button'
-  },
-  href: {
-    type: String,
-    default: ''
-  },
-  variant: {
-    type: String,
-    default: 'primary'
-  },
-  size: {
-    type: String,
-    default: 'md'
-  }
+	text: {
+		type: String,
+		required: true,
+		default: "Кнопка",
+	},
+	type: {
+		type: String,
+		default: "button",
+	},
+	href: {
+		type: String,
+		default: "",
+	},
+	variant: {
+		type: String,
+		default: "primary",
+	},
+	size: {
+		type: String,
+		default: "md",
+	},
 });
 
 const attrs = useAttrs();
 
 const computedClass = computed(() => {
-  return [
-    'base-button',
-    `base-button--${props.variant}`,
-    `base-button--${props.size}`
-  ].join(' ');
+	return [
+		"base-button",
+		`base-button--${props.variant}`,
+		`base-button--${props.size}`,
+	].join(" ");
 });
 </script>
 
