@@ -1,11 +1,11 @@
 <script setup>
-import { ref } from 'vue';
 import IconLogo from "@/components/icons/IconLogo.vue";
+import { ref } from "vue";
 
-const logoUrl = ref('/');
+const logoUrl = ref("/");
 
 const updateLogoUrl = (newUrl) => {
-  logoUrl.value = newUrl;
+	logoUrl.value = newUrl;
 };
 </script>
 

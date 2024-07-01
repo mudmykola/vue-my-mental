@@ -1,9 +1,9 @@
 <script setup>
-import { ref } from 'vue';
 import ManualStatisticsComponent from "@/components/manual/ManualStatisticsComponent.vue";
 import ManualTextImageComponent from "@/components/manual/ManualTextImageComponent.vue";
+import { ref } from "vue";
 
-const manualTitle = ref('Mymental - це зручно:');
+const manualTitle = ref("Mymental - це зручно:");
 </script>
 
 <template>

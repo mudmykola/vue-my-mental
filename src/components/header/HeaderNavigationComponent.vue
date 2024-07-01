@@ -17,47 +17,47 @@
 </template>
 
 <script setup>
-import {ref} from 'vue';
 import IconAngelDown from "@/components/icons/IconAngelDown.vue";
+import { ref } from "vue";
 
 const menuItems = ref([
-  {
-    title: 'Про нас',
-    link: '/about',
-    isDropdownVisible: false,
-  },
-  {
-    title: 'Наші фахівці',
-    link: '/experts',
-    isDropdownVisible: false,
-  },
-  {
-    title: 'Спеціалістам',
-    link: '/specialists',
-    isDropdownVisible: false,
-    submenu: [
-      {
-        title: 'Медицина',
-        link: '/specialists/medicine',
-      },
-      {
-        title: 'Техніка',
-        link: '/specialists/tech',
-      },
-      {
-        title: 'Право',
-        link: '/specialists/law',
-      }
-    ],
-  }
+	{
+		title: "Про нас",
+		link: "/about",
+		isDropdownVisible: false,
+	},
+	{
+		title: "Наші фахівці",
+		link: "/experts",
+		isDropdownVisible: false,
+	},
+	{
+		title: "Спеціалістам",
+		link: "/specialists",
+		isDropdownVisible: false,
+		submenu: [
+			{
+				title: "Медицина",
+				link: "/specialists/medicine",
+			},
+			{
+				title: "Техніка",
+				link: "/specialists/tech",
+			},
+			{
+				title: "Право",
+				link: "/specialists/law",
+			},
+		],
+	},
 ]);
 
 function showDropdown(item) {
-  item.isDropdownVisible = true;
+	item.isDropdownVisible = true;
 }
 
 function hideDropdown(item) {
-  item.isDropdownVisible = false;
+	item.isDropdownVisible = false;
 }
 </script>
 

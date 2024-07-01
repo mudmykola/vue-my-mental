@@ -1,20 +1,20 @@
 <script setup>
-import { ref } from 'vue';
 import BaseButton from "@/components/ui/BaseButton.vue";
+import { ref } from "vue";
 
-const heroTitle = ref('Психотерапія і ментальне здоровʼя');
+const heroTitle = ref("Психотерапія і ментальне здоровʼя");
 const showTherapistList = ref(false);
 
 const therapistList = ref([
-  { name: 'Психологи', link: '' },
-  { name: 'Психотерапевти', link: '' },
-  { name: 'Психіатри', link: '' },
-  { name: 'Онлайн', link: '',},
-  { name: 'Офлайн', link: '' }
+	{ name: "Психологи", link: "" },
+	{ name: "Психотерапевти", link: "" },
+	{ name: "Психіатри", link: "" },
+	{ name: "Онлайн", link: "" },
+	{ name: "Офлайн", link: "" },
 ]);
 
 const toggleTherapistList = () => {
-  showTherapistList.value = !showTherapistList.value;
+	showTherapistList.value = !showTherapistList.value;
 };
 </script>
 

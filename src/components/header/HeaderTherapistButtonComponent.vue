@@ -1,18 +1,18 @@
 <script setup>
-import { defineProps } from 'vue';
+import { defineProps } from "vue";
 
 const props = defineProps({
-  btnText: {
-    type: String,
-    required: true,
-    default: 'Підібрати психотерапевта',
-  },
-  btnUrl: {
-    type: String,
-    required: true,
-    default: '#',
-  }
-})
+	btnText: {
+		type: String,
+		required: true,
+		default: "Підібрати психотерапевта",
+	},
+	btnUrl: {
+		type: String,
+		required: true,
+		default: "#",
+	},
+});
 </script>
 
 <template>
