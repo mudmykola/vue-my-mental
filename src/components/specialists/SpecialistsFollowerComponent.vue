@@ -41,13 +41,16 @@ const toggleShowAllFollowers = () => {
       <div
         v-if="remainingFollowerCount > 0"
         :style="{ marginLeft: initialFollowers.length > 0 ? '-18px' : '0' }"
-        class="w-[180px] h-[180px] font-bold rounded-full bg-gray-300 flex items-center justify-center cursor-pointer border-4 border-white"
+        class="w-[180px] h-[180px] text-2xl text-primary font-bold rounded-full bg-secondaryWhite flex items-center justify-center cursor-pointer border-4 border-white"
         @click="toggleShowAllFollowers"
       >
         +{{ remainingFollowerCount }}
       </div>
     </div>
-    <div v-if="showAllFollowers" class="flex flex-wrap gap-2.5 mt-5">
+    <div
+      v-if="showAllFollowers"
+      class="flex flex-wrap gap-2.5 mt-5 justify-center"
+    >
       <div
         v-for="(follower, index) in allFollowers"
         :key="follower.login.uuid"
