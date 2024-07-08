@@ -8,7 +8,8 @@ import IconMessage from "@/components/icons/IconMessage.vue";
       <li>
         <div class="specialists-cart__benefit--box">
           <IconMessage />
-          <p></p>
+          <p>Мають досвід роботи
+            від 2-х років</p>
         </div>
       </li>
     </ul>
