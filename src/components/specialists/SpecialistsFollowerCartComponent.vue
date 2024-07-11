@@ -4,8 +4,8 @@ import SpecialistsCartContentComponent from "@/components/specialists/Specialist
 </script>
 
 <template>
-  <div class="specialists-cart flex">
-    <div class="specialists-cart__benefits">
+  <div class="specialists-cart flex"  >
+    <div class="specialists-cart__benefits" >
       <SpecialistsCartBenefitsComponent />
     </div>
     <div class="specialists-cart__content">
