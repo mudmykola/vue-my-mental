@@ -19,7 +19,7 @@ const title = ref(
           <SpecialistsFollowerComponent />
         </div>
         <div class="specialists-cart__follower">
-          <SpecialistsFollowerCartComponent/>
+          <SpecialistsFollowerCartComponent />
         </div>
       </div>
     </div>
