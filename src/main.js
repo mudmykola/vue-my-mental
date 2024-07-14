@@ -6,7 +6,6 @@ import store from "./store";
 import "aos/dist/aos.css";
 import BaseButton from "@/components/ui/BaseButton.vue";
 import "./assets/index.css";
-
 AOS.init({});
 
 const app = createApp(App);

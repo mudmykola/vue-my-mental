@@ -18,7 +18,7 @@ const title = ref(
         <div class="specialists-follower flex justify-center mb-12">
           <SpecialistsFollowerComponent />
         </div>
-        <div class="specialists-cart__follower">
+        <div class="specialists-cart__follower grid justify-center">
           <SpecialistsFollowerCartComponent />
         </div>
       </div>
