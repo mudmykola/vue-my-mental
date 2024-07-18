@@ -35,13 +35,13 @@ const testimonials = ref([
 </script>
 
 <template>
-  <carousel :itemsToShow="2.95" :transition="500" :wrapAround="true">
+  <carousel  :itemsToShow="2.95" :transition="500" :wrapAround="true">
     <slide
       v-for="(testimonial, index) in testimonials"
       :key="index"
     >
       <div
-        class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4"
+        class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
       >
         <div
           class="testimonial-slide__top flex items-center w-full justify-between"
