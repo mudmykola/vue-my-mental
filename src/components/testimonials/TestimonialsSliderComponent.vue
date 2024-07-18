@@ -48,7 +48,7 @@ const testimonials = ref([
         >
           <div class="testimonial-slide__top--avatar flex">
             <div class="testimonial-avatar">
-              <img :alt="testimonial.name" :src="testimonial.avatar" />
+              <img :alt="testimonial.name" :src="testimonial.avatar" class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]" />
             </div>
             <div class="testimonial-slide__top--avatar__date">
               <h3 class="text-[16px] font-bold">{{ testimonial.name }}</h3>
@@ -58,18 +58,18 @@ const testimonials = ref([
             </div>
           </div>
           <div class="testimonial-slide__top--rating">
-            <div class="testimonial-rating">
+            <div class="testimonial-rating mb-2.5">
               <span
                 v-for="star in testimonial.rating"
                 :key="star"
-                class="star-icon"
+                class="star-icon text-amber-400 text-[18px]"
                 >★</span
               >
             </div>
           </div>
         </div>
-        <div class="testimonial-info mt-5">
-          <p class="testimonial-content text-[16px] text-wrap">
+        <div class="testimonial-info mt-5 flex-1">
+          <p class="testimonial-content text-[16px] leading-6 text-wrap">
             {{ testimonial.content }}
           </p>
         </div>
@@ -82,45 +82,6 @@ const testimonials = ref([
 </template>
 
 <style scoped>
-.testimonial-slide {
-  display: flex;
-  align-items: center;
-}
-
-.testimonial-avatar img {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
-}
-
-.testimonial-info {
-  flex: 1;
-}
-
-.testimonial-info h3 {
-  margin-top: 0;
-  margin-bottom: 5px;
-}
-
-.testimonial-date {
-  font-size: 14px;
-  color: #999;
-}
-
-.testimonial-rating {
-  margin-bottom: 10px;
-}
-
-.star-icon {
-  color: gold;
-  font-size: 18px;
-}
-
-.testimonial-content {
-  line-height: 1.5;
-}
 .carousel__slide {
   padding: 5px;
 }
