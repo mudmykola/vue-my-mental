@@ -9,7 +9,7 @@ const title = ref("Відгуки про Mymental");
   <div class="testimonials bg-muted mt-[128px]">
     <div class="container">
       <div class="testimonials-inner pt-[128px]">
-        <div class="testimonials-inner__title mb-12">
+        <div class="testimonials-inner__title mby-12">
           <h2 class="text-[55px] font-bold font-sans text-center">{{ title }}</h2>
         </div>
         <div class="testimonials-inner__slider">
