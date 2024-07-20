@@ -6,7 +6,7 @@ const title = ref("Відгуки про Mymental");
 </script>
 
 <template>
-  <div class="testimonials bg-muted mt-[128px]">
+  <div class="testimonials bg-muted mt-[128px] pb-16">
     <div class="container">
       <div class="testimonials-inner pt-[128px]">
         <div class="testimonials-inner__title mby-12">
