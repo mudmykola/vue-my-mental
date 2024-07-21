@@ -4,15 +4,15 @@ import HeaderComponent from "@/components/header/HeaderComponent.vue";
 </script>
 
 <template>
-  <div class="wrapper ">
+  <div class="wrapper">
     <header class="header">
-      <HeaderComponent/>
+      <HeaderComponent />
     </header>
     <main class="main">
-      <slot/>
+      <slot />
     </main>
     <footer class="footer">
-      <FooterComponent/>
+      <FooterComponent />
     </footer>
   </div>
 </template>
