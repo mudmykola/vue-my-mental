@@ -9,11 +9,11 @@ const questionsAndAnswers = computed(() => store.getters.questionsAndAnswers);
 </script>
 
 <template>
-  <div class="faq">
+  <div class="faq bg-muted">
     <div class="container">
       <div class="faq-inner">
         <h2
-          class="faq-inner__title text-center text-[55px] font-bold font-sans mt-16"
+          class="faq-inner__title text-center text-[55px] font-bold font-sans"
         >
           {{ faqTitle }}
         </h2>
