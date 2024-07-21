@@ -9,7 +9,7 @@ const title = ref(
 </script>
 
 <template>
-  <div class="specialists" data-aos="fade-up" data-aos-offset="2100">
+  <div class="specialists">
     <div class="container">
       <div class="specialists-inner">
         <div class="specialists-inner__title mt-32 mb-12">

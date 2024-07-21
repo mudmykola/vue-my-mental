@@ -16,7 +16,7 @@ const manualTitle = ref("Mymental - це зручно:");
         <div class="manual-inner__title text-center pt-[154px]">
           <h2 class="text-[48px] font-bold font-sans text-black">{{ manualTitle }}</h2>
         </div>
-        <div id="manual-test" class="manual-test mt-12" data-aos="fade-up" data-aos-offset="300">
+        <div id="manual-test" class="manual-test mt-12">
           <ManualTextImageComponent
               :reverse="false"
               img-alt="left-text"
@@ -25,7 +25,7 @@ const manualTitle = ref("Mymental - це зручно:");
               text-title="Обери психотерапевта"
           />
         </div>
-        <div id="manual-time" class="manual-time" data-aos="fade-up" data-aos-anchor-placement="manual-test"  data-aos-offset="850">
+        <div id="manual-time" class="manual-time">
           <ManualTextImageComponent
               :reverse="true"
               img-alt="right-text"
@@ -34,7 +34,7 @@ const manualTitle = ref("Mymental - це зручно:");
               text-title="Вибери зручний для тебе день та час зустрічі"
           />
         </div>
-        <div id="manual-booking" class="manual-booking mt-12" data-aos="fade-up" data-aos-anchor-placement="manual-time" data-aos-offset="1200">
+        <div id="manual-booking" class="manual-booking mt-12">
           <ManualTextImageComponent
               :reverse="false"
               img-alt="left-text"
@@ -43,7 +43,7 @@ const manualTitle = ref("Mymental - це зручно:");
               text-title="Забронюй консультацію"
           />
         </div>
-        <div id="manual-process" class="manual-process" data-aos="fade-up" data-aos-anchor-placement="manual-booking" data-aos-offset="1450">
+        <div id="manual-process" class="manual-process">
           <ManualTextImageComponent
               :reverse="true"
               img-alt="right-text"
