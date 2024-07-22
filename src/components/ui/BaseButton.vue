@@ -63,6 +63,10 @@ const computedClass = computed(() => {
   @apply bg-transparent font-sans rounded-[12px] p-[18px] font-bold text-primary border border-primary hover:bg-primary hover:text-white;
 }
 
+.base-button--white {
+  @apply bg-white text-primary font-sans font-bold  rounded-[12px] p-[18px] border border-primary hover:bg-gray-100;
+}
+
 .base-button--sm {
   @apply text-sm;
 }
