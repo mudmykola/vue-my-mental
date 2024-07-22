@@ -18,6 +18,7 @@ export default {
 				background: "#E4EBE4",
 				text: "#000000",
 				muted: "#F7FAF7",
+				blue: "#29A9EB",
 			},
 			fontFamily: {
 				sans: ["Mulish", "sans-serif"],
