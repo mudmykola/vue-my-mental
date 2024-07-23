@@ -1,19 +1,16 @@
-name: Node.js CI
+name: CI
 
 on:
   push:
-    branches: [ "master" ]
+    branches:
+      - master
   pull_request:
-    branches: [ "master" ]
+    branches:
+      - master
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
-    strategy:
-      matrix:
-
-        node-version: [ 20 ]
 
     steps:
       - name: Checkout repository
@@ -22,18 +19,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: ${{ matrix.node-version }}
-
-      - name: Cache node modules
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+          node-version: '20'
 
       - name: Install dependencies
         run: npm install
 
-      - name: Run build
-        run: npm run build
+      - name: Run Biome lint
+        run: npx biome lint
+
+      - name: Compress images
+        run: npx imagemin 'public/images/*.{jpg,png,svg}' 'public/icon/*.{jpg,png,svg}' --out-dir='dist/images' --recursive
