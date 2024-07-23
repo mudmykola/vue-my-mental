@@ -1,5 +1,6 @@
 <script setup>
 import FooterLogoComponent from "@/components/footer/FooterLogoComponent.vue";
+import FooterMenuComponent from "@/components/footer/FooterMenuComponent.vue";
 import { ref } from "vue";
 const currentYear = new Date().getFullYear();
 const footerCopy = ref(`© ${currentYear} MyMental. Всі права захищені.`);
@@ -12,7 +13,9 @@ const footerCopy = ref(`© ${currentYear} MyMental. Всі права захищ
         <div class="footer-info__logo">
           <FooterLogoComponent />
         </div>
-        <div class="footer-info__menu">menu</div>
+        <div class="footer-info__menu">
+          <FooterMenuComponent/>
+        </div>
         <div class="footer-info__legal">legal</div>
         <div class="footer-info__helpful">helpful</div>
       </div>
