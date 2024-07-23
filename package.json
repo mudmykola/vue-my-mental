@@ -9,7 +9,8 @@
 		"preview": "vite preview",
 		"lint": "biome lint .",
 		"fix": "biome lint . --fix",
-		"test": "jest"
+		"test": "jest",
+		"format": "prettier --check ."
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^6.5.2",
