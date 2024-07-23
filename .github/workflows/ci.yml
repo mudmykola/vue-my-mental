@@ -12,6 +12,7 @@ jobs:
 
     strategy:
       matrix:
+
         node-version: [ 20 ]
 
     steps:
@@ -40,3 +41,5 @@ jobs:
     # Видалити або закоментувати цей блок, якщо тести не потрібні
     # - name: Run tests
     #   run: npm test
+
+        
