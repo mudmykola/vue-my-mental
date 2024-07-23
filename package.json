@@ -8,7 +8,8 @@
 		"build": "vite build",
 		"preview": "vite preview",
 		"lint": "biome lint .",
-		"fix": "biome lint . --fix"
+		"fix": "biome lint . --fix",
+		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"dependencies": {
 		"@fortawesome/fontawesome-free": "^6.5.2",
