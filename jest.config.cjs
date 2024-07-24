@@ -10,6 +10,7 @@ module.exports = {
 	transformIgnorePatterns: ["/node_modules/"],
 	moduleNameMapper: {
 		"^@/(.*)$": "<rootDir>/src/$1",
+		"\\.(css|less|sass|scss)$": "identity-obj-proxy",
 	},
 	snapshotSerializers: ["jest-serializer-vue"],
 };

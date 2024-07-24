@@ -1,0 +1,816 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`TestimonialsSliderComponent renders correctly 1`] = `
+<section
+  aria-label="Gallery"
+  class="carousel"
+  dir="ltr"
+  tabindex="0"
+>
+  <div
+    class="carousel__viewport"
+  >
+    <ol
+      class="carousel__track"
+      style="transform: translateX(0px); transition: 0ms; margin: 0px -0px; width: 100%;"
+    >
+      <li
+        aria-hidden="true"
+        class="carousel__slide carousel__slide--clone"
+        style="width: 33.89830508474576%;"
+      >
+        <div
+          class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
+        >
+          <div
+            class="testimonial-slide__top flex items-center w-full justify-between"
+          >
+            <div
+              class="testimonial-slide__top--avatar flex"
+            >
+              <div
+                class="testimonial-avatar"
+              >
+                <img
+                  alt="Ілля"
+                  class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]"
+                  src="/images/avatar1.png"
+                />
+              </div>
+              <div
+                class="testimonial-slide__top--avatar__date"
+              >
+                <h3
+                  class="text-[16px] font-bold"
+                >
+                  Ілля
+                </h3>
+                <p
+                  class="testimonial-date text-[14px] text-[#5E6D55]"
+                >
+                  1 днів назад
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide__top--rating"
+            >
+              <div
+                class="testimonial-rating mb-2.5"
+              >
+                
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-info mt-5 flex-1"
+          >
+            <p
+              class="testimonial-content text-[16px] leading-6 text-wrap"
+            >
+              Поки що було 3 сесіїї з Галиною.
+Мені справді подобається.
+По-перше, це класна намога екологічно виплеснути все те, що на серці та у думках. По-друге, важливо і цінно отримати підтримку. Після сесій я почуття полегшення. Дякую чудовому психологу!
+            </p>
+          </div>
+        </div>
+      </li>
+      <li
+        aria-hidden="true"
+        class="carousel__slide carousel__slide--clone"
+        style="width: 33.89830508474576%;"
+      >
+        <div
+          class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
+        >
+          <div
+            class="testimonial-slide__top flex items-center w-full justify-between"
+          >
+            <div
+              class="testimonial-slide__top--avatar flex"
+            >
+              <div
+                class="testimonial-avatar"
+              >
+                <img
+                  alt="Людмила"
+                  class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]"
+                  src="/images/avatar2.png"
+                />
+              </div>
+              <div
+                class="testimonial-slide__top--avatar__date"
+              >
+                <h3
+                  class="text-[16px] font-bold"
+                >
+                  Людмила
+                </h3>
+                <p
+                  class="testimonial-date text-[14px] text-[#5E6D55]"
+                >
+                  1 днів назад
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide__top--rating"
+            >
+              <div
+                class="testimonial-rating mb-2.5"
+              >
+                
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-info mt-5 flex-1"
+          >
+            <p
+              class="testimonial-content text-[16px] leading-6 text-wrap"
+            >
+              Мені дуже подобається працювати
+з Надією. Вона допомагає мені краще зрозуміти себе і процеси, через які я проходжу. Я починаю більше замислюватися про свої патерни поведінки, на які не звертала уваги. Надія чуйна, уважна та спеціаліст своє справи! Рада продовжити цей шлях :)
+            </p>
+          </div>
+        </div>
+      </li>
+      <li
+        aria-hidden="false"
+        class="carousel__slide carousel__slide--clone carousel__slide--visible carousel__slide--prev"
+        style="width: 33.89830508474576%;"
+      >
+        <div
+          class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
+        >
+          <div
+            class="testimonial-slide__top flex items-center w-full justify-between"
+          >
+            <div
+              class="testimonial-slide__top--avatar flex"
+            >
+              <div
+                class="testimonial-avatar"
+              >
+                <img
+                  alt="Anastasia"
+                  class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]"
+                  src="/images/avatar3.png"
+                />
+              </div>
+              <div
+                class="testimonial-slide__top--avatar__date"
+              >
+                <h3
+                  class="text-[16px] font-bold"
+                >
+                  Anastasia
+                </h3>
+                <p
+                  class="testimonial-date text-[14px] text-[#5E6D55]"
+                >
+                  1 днів назад
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide__top--rating"
+            >
+              <div
+                class="testimonial-rating mb-2.5"
+              >
+                
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-info mt-5 flex-1"
+          >
+            <p
+              class="testimonial-content text-[16px] leading-6 text-wrap"
+            >
+              Перша сесія з Надією була дуже приємною та корисною! Вона створює затишну атмосферу й допомогає відчуватися комфортно під час обговорення важливих тем. Вдячна за розуміння та підтримку!
+            </p>
+          </div>
+        </div>
+      </li>
+      <li
+        aria-hidden="false"
+        class="carousel__slide carousel__slide--visible carousel__slide--active"
+        style="width: 33.89830508474576%;"
+      >
+        <div
+          class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
+        >
+          <div
+            class="testimonial-slide__top flex items-center w-full justify-between"
+          >
+            <div
+              class="testimonial-slide__top--avatar flex"
+            >
+              <div
+                class="testimonial-avatar"
+              >
+                <img
+                  alt="Ілля"
+                  class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]"
+                  src="/images/avatar1.png"
+                />
+              </div>
+              <div
+                class="testimonial-slide__top--avatar__date"
+              >
+                <h3
+                  class="text-[16px] font-bold"
+                >
+                  Ілля
+                </h3>
+                <p
+                  class="testimonial-date text-[14px] text-[#5E6D55]"
+                >
+                  1 днів назад
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide__top--rating"
+            >
+              <div
+                class="testimonial-rating mb-2.5"
+              >
+                
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-info mt-5 flex-1"
+          >
+            <p
+              class="testimonial-content text-[16px] leading-6 text-wrap"
+            >
+              Поки що було 3 сесіїї з Галиною.
+Мені справді подобається.
+По-перше, це класна намога екологічно виплеснути все те, що на серці та у думках. По-друге, важливо і цінно отримати підтримку. Після сесій я почуття полегшення. Дякую чудовому психологу!
+            </p>
+          </div>
+        </div>
+      </li>
+      <li
+        aria-hidden="false"
+        class="carousel__slide carousel__slide--visible carousel__slide--next"
+        style="width: 33.89830508474576%;"
+      >
+        <div
+          class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
+        >
+          <div
+            class="testimonial-slide__top flex items-center w-full justify-between"
+          >
+            <div
+              class="testimonial-slide__top--avatar flex"
+            >
+              <div
+                class="testimonial-avatar"
+              >
+                <img
+                  alt="Людмила"
+                  class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]"
+                  src="/images/avatar2.png"
+                />
+              </div>
+              <div
+                class="testimonial-slide__top--avatar__date"
+              >
+                <h3
+                  class="text-[16px] font-bold"
+                >
+                  Людмила
+                </h3>
+                <p
+                  class="testimonial-date text-[14px] text-[#5E6D55]"
+                >
+                  1 днів назад
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide__top--rating"
+            >
+              <div
+                class="testimonial-rating mb-2.5"
+              >
+                
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-info mt-5 flex-1"
+          >
+            <p
+              class="testimonial-content text-[16px] leading-6 text-wrap"
+            >
+              Мені дуже подобається працювати
+з Надією. Вона допомагає мені краще зрозуміти себе і процеси, через які я проходжу. Я починаю більше замислюватися про свої патерни поведінки, на які не звертала уваги. Надія чуйна, уважна та спеціаліст своє справи! Рада продовжити цей шлях :)
+            </p>
+          </div>
+        </div>
+      </li>
+      <li
+        aria-hidden="true"
+        class="carousel__slide"
+        style="width: 33.89830508474576%;"
+      >
+        <div
+          class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
+        >
+          <div
+            class="testimonial-slide__top flex items-center w-full justify-between"
+          >
+            <div
+              class="testimonial-slide__top--avatar flex"
+            >
+              <div
+                class="testimonial-avatar"
+              >
+                <img
+                  alt="Anastasia"
+                  class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]"
+                  src="/images/avatar3.png"
+                />
+              </div>
+              <div
+                class="testimonial-slide__top--avatar__date"
+              >
+                <h3
+                  class="text-[16px] font-bold"
+                >
+                  Anastasia
+                </h3>
+                <p
+                  class="testimonial-date text-[14px] text-[#5E6D55]"
+                >
+                  1 днів назад
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide__top--rating"
+            >
+              <div
+                class="testimonial-rating mb-2.5"
+              >
+                
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-info mt-5 flex-1"
+          >
+            <p
+              class="testimonial-content text-[16px] leading-6 text-wrap"
+            >
+              Перша сесія з Надією була дуже приємною та корисною! Вона створює затишну атмосферу й допомогає відчуватися комфортно під час обговорення важливих тем. Вдячна за розуміння та підтримку!
+            </p>
+          </div>
+        </div>
+      </li>
+      <li
+        aria-hidden="true"
+        class="carousel__slide carousel__slide--clone"
+        style="width: 33.89830508474576%;"
+      >
+        <div
+          class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
+        >
+          <div
+            class="testimonial-slide__top flex items-center w-full justify-between"
+          >
+            <div
+              class="testimonial-slide__top--avatar flex"
+            >
+              <div
+                class="testimonial-avatar"
+              >
+                <img
+                  alt="Ілля"
+                  class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]"
+                  src="/images/avatar1.png"
+                />
+              </div>
+              <div
+                class="testimonial-slide__top--avatar__date"
+              >
+                <h3
+                  class="text-[16px] font-bold"
+                >
+                  Ілля
+                </h3>
+                <p
+                  class="testimonial-date text-[14px] text-[#5E6D55]"
+                >
+                  1 днів назад
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide__top--rating"
+            >
+              <div
+                class="testimonial-rating mb-2.5"
+              >
+                
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-info mt-5 flex-1"
+          >
+            <p
+              class="testimonial-content text-[16px] leading-6 text-wrap"
+            >
+              Поки що було 3 сесіїї з Галиною.
+Мені справді подобається.
+По-перше, це класна намога екологічно виплеснути все те, що на серці та у думках. По-друге, важливо і цінно отримати підтримку. Після сесій я почуття полегшення. Дякую чудовому психологу!
+            </p>
+          </div>
+        </div>
+      </li>
+      <li
+        aria-hidden="true"
+        class="carousel__slide carousel__slide--clone"
+        style="width: 33.89830508474576%;"
+      >
+        <div
+          class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
+        >
+          <div
+            class="testimonial-slide__top flex items-center w-full justify-between"
+          >
+            <div
+              class="testimonial-slide__top--avatar flex"
+            >
+              <div
+                class="testimonial-avatar"
+              >
+                <img
+                  alt="Людмила"
+                  class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]"
+                  src="/images/avatar2.png"
+                />
+              </div>
+              <div
+                class="testimonial-slide__top--avatar__date"
+              >
+                <h3
+                  class="text-[16px] font-bold"
+                >
+                  Людмила
+                </h3>
+                <p
+                  class="testimonial-date text-[14px] text-[#5E6D55]"
+                >
+                  1 днів назад
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide__top--rating"
+            >
+              <div
+                class="testimonial-rating mb-2.5"
+              >
+                
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-info mt-5 flex-1"
+          >
+            <p
+              class="testimonial-content text-[16px] leading-6 text-wrap"
+            >
+              Мені дуже подобається працювати
+з Надією. Вона допомагає мені краще зрозуміти себе і процеси, через які я проходжу. Я починаю більше замислюватися про свої патерни поведінки, на які не звертала уваги. Надія чуйна, уважна та спеціаліст своє справи! Рада продовжити цей шлях :)
+            </p>
+          </div>
+        </div>
+      </li>
+      <li
+        aria-hidden="true"
+        class="carousel__slide carousel__slide--clone"
+        style="width: 33.89830508474576%;"
+      >
+        <div
+          class="testimonial-slide flex flex-col text-left py-5 px-5 bg-white shadow-2xl rounded-2xl gap-4 cursor-pointer"
+        >
+          <div
+            class="testimonial-slide__top flex items-center w-full justify-between"
+          >
+            <div
+              class="testimonial-slide__top--avatar flex"
+            >
+              <div
+                class="testimonial-avatar"
+              >
+                <img
+                  alt="Anastasia"
+                  class="w-[60px] h-[60px] rounded-[50%] object-cover mr-[20px]"
+                  src="/images/avatar3.png"
+                />
+              </div>
+              <div
+                class="testimonial-slide__top--avatar__date"
+              >
+                <h3
+                  class="text-[16px] font-bold"
+                >
+                  Anastasia
+                </h3>
+                <p
+                  class="testimonial-date text-[14px] text-[#5E6D55]"
+                >
+                  1 днів назад
+                </p>
+              </div>
+            </div>
+            <div
+              class="testimonial-slide__top--rating"
+            >
+              <div
+                class="testimonial-rating mb-2.5"
+              >
+                
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                <span
+                  class="star-icon text-amber-400 text-[18px]"
+                >
+                  ★
+                </span>
+                
+              </div>
+            </div>
+          </div>
+          <div
+            class="testimonial-info mt-5 flex-1"
+          >
+            <p
+              class="testimonial-content text-[16px] leading-6 text-wrap"
+            >
+              Перша сесія з Надією була дуже приємною та корисною! Вона створює затишну атмосферу й допомогає відчуватися комфортно під час обговорення важливих тем. Вдячна за розуміння та підтримку!
+            </p>
+          </div>
+        </div>
+      </li>
+    </ol>
+  </div>
+  
+  <ol
+    class="carousel__pagination"
+  >
+    <li
+      class="carousel__pagination-item"
+    >
+      <button
+        aria-label="Navigate to slide 1"
+        class="carousel__pagination-button carousel__pagination-button--active"
+        type="button"
+      />
+    </li>
+  </ol>
+  
+  <div
+    aria-atomic="true"
+    aria-live="polite"
+    class="carousel__liveregion carousel__sr-only"
+  >
+    Item 1 of 3
+  </div>
+</section>
+`;
