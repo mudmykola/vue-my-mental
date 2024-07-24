@@ -18,7 +18,7 @@ describe("HeaderNavigationComponent.vue", () => {
 		await specialistMenuItem.trigger("mouseenter");
 
 		const dropdownMenu = specialistMenuItem.find(".dropdown-menu");
-		expect(dropdownMenu.exists()).toBe(true); // Ensure the dropdown menu exists
+		expect(dropdownMenu.exists()).toBe(true);
 
 		expect(dropdownMenu.isVisible()).toBe(true);
 	});
