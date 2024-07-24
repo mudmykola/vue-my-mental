@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HeaderNavigationComponent.vue renders correctly 1`] = `
+<div
+  class="header-menu"
+>
+  <ul
+    class="flex items-center gap-5"
+  >
+    
+    <li
+      class="header-menu__item"
+    >
+      <a
+        class="text-[14px] text-primary font-bold font-sans"
+        href="/about"
+      >
+        Про нас
+      </a>
+      <!--v-if-->
+      <!--v-if-->
+    </li>
+    <li
+      class="header-menu__item"
+    >
+      <a
+        class="text-[14px] text-primary font-bold font-sans"
+        href="/experts"
+      >
+        Наші фахівці
+      </a>
+      <!--v-if-->
+      <!--v-if-->
+    </li>
+    <li
+      class="header-menu__item"
+    >
+      <a
+        class="text-[14px] text-primary font-bold font-sans"
+        href="/specialists"
+      >
+        Спеціалістам
+      </a>
+      <span
+        class="menu-icon ml-1 transition-transform duration-300 ease"
+      >
+        <svg
+          fill="none"
+          height="10"
+          viewBox="0 0 10 10"
+          width="10"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0 3.35737L3.96667 7.31862C4.2405 7.59118 4.61114 7.74419 4.9975 7.74419C5.38386 7.74419 5.7545 7.59118 6.02833 7.31862L10 3.35279L9.11625 2.4707L5.145 6.43612C5.10593 6.47518 5.05295 6.49712 4.99771 6.49712C4.94247 6.49712 4.88948 6.47518 4.85042 6.43612L0.88375 2.47529L0 3.35737Z"
+            fill="black"
+            style="fill: black; fill-opacity: 1;"
+          />
+        </svg>
+      </span>
+      <!--v-if-->
+    </li>
+    
+  </ul>
+</div>
+`;
