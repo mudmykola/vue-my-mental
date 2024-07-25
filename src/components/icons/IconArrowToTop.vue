@@ -1,0 +1,22 @@
+<template>
+  <svg
+    width="26"
+    height="26"
+    viewBox="0 0 26 26"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M20.582 13.0007L12.9987 5.41732M12.9987 5.41732L5.41537 13.0007M12.9987 5.41732L12.9987 20.584"
+      stroke="#19453F"
+      style="
+        stroke: #19453f;
+        stroke: color(display-p3 0.098 0.2706 0.2471);
+        stroke-opacity: 1;
+      "
+      stroke-width="1.5"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+    />
+  </svg>
+</template>

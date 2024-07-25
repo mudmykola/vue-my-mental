@@ -3,6 +3,7 @@ import FooterHelpfulComponent from "@/components/footer/FooterHelpfulComponent.v
 import FooterLegalComponent from "@/components/footer/FooterLegalComponent.vue";
 import FooterLogoComponent from "@/components/footer/FooterLogoComponent.vue";
 import FooterMenuComponent from "@/components/footer/FooterMenuComponent.vue";
+import ScrollTopBtnComponent from "@/components/footer/ScrollTopBtnComponent.vue";
 import { ref } from "vue";
 const currentYear = new Date().getFullYear();
 const footerCopy = ref(`© ${currentYear} MyMental. Всі права захищені.`);
@@ -23,6 +24,9 @@ const footerCopy = ref(`© ${currentYear} MyMental. Всі права захищ
         </div>
         <div class="footer-info__helpful">
           <FooterHelpfulComponent/>
+        </div>
+        <div class="btn-scroll__top">
+          <ScrollTopBtnComponent/>
         </div>
       </div>
       <div class="footer-copy mt-14">
