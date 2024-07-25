@@ -12,13 +12,13 @@ const menuTitle = ref("Навігація");
 
 <template>
   <div class="footer-menu">
-    <div class="footer-menu__inner">
+    <div class="footer-menu__inner flex flex-col gap-6">
       <h2 class="text-[16px] font-bold">{{ menuTitle }}</h2>
-      <ul>
+      <ul class="flex flex-col gap-6">
         <li v-for="(item, index) in menuItems" :key="index">
           <router-link
             :to="item.link"
-            class="footer-menu__link text-[14px] text-primary font-bold font-sans"
+            class="footer-menu__link text-[14px] text-primary font-normal font-sans "
             >{{ item.text }}</router-link
           >
         </li>
