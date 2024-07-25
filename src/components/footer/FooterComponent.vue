@@ -1,4 +1,5 @@
 <script setup>
+import FooterLegalComponent from "@/components/footer/FooterLegalComponent.vue";
 import FooterLogoComponent from "@/components/footer/FooterLogoComponent.vue";
 import FooterMenuComponent from "@/components/footer/FooterMenuComponent.vue";
 import { ref } from "vue";
@@ -16,7 +17,9 @@ const footerCopy = ref(`© ${currentYear} MyMental. Всі права захищ
         <div class="footer-info__menu">
           <FooterMenuComponent/>
         </div>
-        <div class="footer-info__legal">legal</div>
+        <div class="footer-info__legal">
+          <FooterLegalComponent/>
+        </div>
         <div class="footer-info__helpful">helpful</div>
       </div>
       <div class="footer-copy mt-14">
