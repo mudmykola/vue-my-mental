@@ -1,4 +1,5 @@
 <script setup>
+import FooterHelpfulComponent from "@/components/footer/FooterHelpfulComponent.vue";
 import FooterLegalComponent from "@/components/footer/FooterLegalComponent.vue";
 import FooterLogoComponent from "@/components/footer/FooterLogoComponent.vue";
 import FooterMenuComponent from "@/components/footer/FooterMenuComponent.vue";
@@ -20,7 +21,9 @@ const footerCopy = ref(`© ${currentYear} MyMental. Всі права захищ
         <div class="footer-info__legal">
           <FooterLegalComponent/>
         </div>
-        <div class="footer-info__helpful">helpful</div>
+        <div class="footer-info__helpful">
+          <FooterHelpfulComponent/>
+        </div>
       </div>
       <div class="footer-copy mt-14">
         <h2 class="text-[13px] text-secondary">{{ footerCopy }}</h2>
