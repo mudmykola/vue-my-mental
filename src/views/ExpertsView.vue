@@ -1,13 +1,10 @@
 <script setup>
+import ExpertsComponent from "@/components/experts/ExpertsComponent.vue";
 import DefaultLayout from "@/layout/DefaultLayout.vue";
 </script>
 
 <template>
 <DefaultLayout>
-  EEExpert
+<ExpertsComponent/>
 </DefaultLayout>
 </template>
-
-<style lang="scss" scoped>
-
-</style>
