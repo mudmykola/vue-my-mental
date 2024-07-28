@@ -17,16 +17,16 @@ const footerCopy = ref(`© ${currentYear} MyMental. Всі права захищ
           <FooterLogoComponent />
         </div>
         <div class="footer-info__menu">
-          <FooterMenuComponent/>
+          <FooterMenuComponent />
         </div>
         <div class="footer-info__legal">
-          <FooterLegalComponent/>
+          <FooterLegalComponent />
         </div>
         <div class="footer-info__helpful">
-          <FooterHelpfulComponent/>
+          <FooterHelpfulComponent />
         </div>
         <div class="btn-scroll__top">
-          <ScrollTopBtnComponent/>
+          <ScrollTopBtnComponent />
         </div>
       </div>
       <div class="footer-copy mt-14">
