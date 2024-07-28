@@ -33,11 +33,18 @@ const helpfulMenu = ref([
     <div class="footer-helpful__inner flex flex-col gap-6">
       <h2 class="text-[16px] font-bold">{{ helpfulTitle }}</h2>
       <ul class="flex flex-col gap-6">
-        <li v-for="(item, index) in helpfulMenu" :key="index" class="flex flex-col gap-6">
-          <a :href="item.link" class="footer-helpful__link text-[14px] text-primary font-normal font-sans">{{ item.text }}</a>
+        <li
+          v-for="(item, index) in helpfulMenu"
+          :key="index"
+          class="flex flex-col gap-6"
+        >
+          <a
+            :href="item.link"
+            class="footer-helpful__link text-[14px] text-primary font-normal font-sans"
+            >{{ item.text }}</a
+          >
         </li>
       </ul>
     </div>
-
   </div>
 </template>
