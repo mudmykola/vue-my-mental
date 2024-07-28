@@ -3,9 +3,9 @@ import ExpertsBannerComponent from "@/components/experts/ExpertsBannerComponent.
 </script>
 
 <template>
-  <div class="experts">
+  <div class="experts bg-muted">
     <div class="container">
-      <div class="experts-inner">
+      <div class="experts-inner pb-10 pt-5">
         <ExpertsBannerComponent />
       </div>
     </div>

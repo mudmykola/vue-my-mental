@@ -9,7 +9,7 @@ const questionsAndAnswers = computed(() => store.getters.questionsAndAnswers);
 </script>
 
 <template>
-  <div class="faq bg-muted">
+  <div class="faq bg-muted pb-32">
     <div class="container">
       <div class="faq-inner">
         <h2

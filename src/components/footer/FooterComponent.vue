@@ -10,7 +10,7 @@ const footerCopy = ref(`© ${currentYear} MyMental. Всі права захищ
 </script>
 
 <template>
-  <div class="footer-inner bg-secondaryWhite mt-32 py-10">
+  <div class="footer-inner bg-secondaryWhite  py-10">
     <div class="container">
       <div class="footer-inner__box grid grid-cols-4">
         <div class="footer-info__logo">

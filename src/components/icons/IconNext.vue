@@ -1,0 +1,19 @@
+<template>
+  <svg
+    fill="none"
+    height="7"
+    viewBox="0 0 6 7"
+    width="6"
+    xmlns="http://www.w3.org/2000/svg"
+  >
+    <path
+      d="M4.75 3.06699C5.08333 3.25944 5.08333 3.74056 4.75 3.93301L1.75 5.66506C1.41667 5.85751 1 5.61695 1 5.23205L1 1.76795C1 1.38305 1.41667 1.14249 1.75 1.33494L4.75 3.06699Z"
+      stroke="#5E6D55"
+      style="
+        stroke: #5e6d55;
+        stroke: color(display-p3 0.3686 0.4275 0.3333);
+        stroke-opacity: 1;
+      "
+    />
+  </svg>
+</template>
