@@ -1,14 +1,36 @@
 <template>
   <div class="header-menu">
     <ul class="flex items-center gap-5">
-      <li class="header-menu__item" v-for="item in menuItems" :key="item.title" @mouseenter="showDropdown(item)" @mouseleave="hideDropdown(item)">
-        <a class="text-[14px] text-primary font-bold font-sans" :href="item.link">{{ item.title }}</a>
-        <span v-if="item.title === 'Спеціалістам'" class="menu-icon ml-1 transition-transform duration-300 ease" :class="{ 'rotate-180': item.isDropdownVisible }">
-          <IconAngelDown/>
+      <li
+          v-for="item in menuItems"
+          :key="item.title"
+          class="header-menu__item"
+          @mouseenter="showDropdown(item)"
+          @mouseleave="hideDropdown(item)"
+      >
+        <a
+            :class="{ active: isActive(item.link) }"
+            :href="item.link"
+            class="text-[14px] text-primary font-bold font-sans"
+        >
+          {{ item.title }}
+        </a>
+        <span
+            v-if="item.title === 'Спеціалістам'"
+            :class="{ 'rotate-180': item.isDropdownVisible }"
+            class="menu-icon ml-1 transition-transform duration-300 ease"
+        >
+          <IconAngelDown />
         </span>
-        <ul v-if="item.isDropdownVisible" class="dropdown-menu ">
-          <li class="w-full px-4" v-for="subItem in item.submenu" :key="subItem.title">
-            <a class="text-[14px] text-primary font-bold font-sans" :href="subItem.link">{{ subItem.title }}</a>
+        <ul v-if="item.isDropdownVisible" class="dropdown-menu">
+          <li v-for="subItem in item.submenu" :key="subItem.title" class="w-full px-4">
+            <a
+                :class="{ active: isActive(subItem.link) }"
+                :href="subItem.link"
+                class="text-[14px] text-primary font-bold font-sans"
+            >
+              {{ subItem.title }}
+            </a>
           </li>
         </ul>
       </li>
@@ -19,6 +41,7 @@
 <script setup>
 import IconAngelDown from "@/components/icons/IconAngelDown.vue";
 import { ref } from "vue";
+import { useRoute } from "vue-router";
 
 const menuItems = ref([
 	{
@@ -52,6 +75,8 @@ const menuItems = ref([
 	},
 ]);
 
+const route = useRoute();
+
 function showDropdown(item) {
 	item.isDropdownVisible = true;
 }
@@ -59,19 +84,19 @@ function showDropdown(item) {
 function hideDropdown(item) {
 	item.isDropdownVisible = false;
 }
+
+function isActive(link) {
+	return route.path === link;
+}
 </script>
 
 <style lang="scss" scoped>
-.header-menu{
-  &__item{
-    a{
+.header-menu {
+  &__item {
+    a {
       position: relative;
     }
-    a:nth-child(0)::after {
-
-      height: 0;
-    }
-    a::after{
+    a::after {
       position: absolute;
       content: '';
       width: 0;
@@ -81,7 +106,8 @@ function hideDropdown(item) {
       background-color: #000;
       transition: width 0.3s;
     }
-    a:hover::after{
+    a:hover::after,
+    a.active::after {
       width: 100%;
       transition: width 0.4s;
     }
@@ -104,27 +130,6 @@ function hideDropdown(item) {
   padding: 8px 0;
   z-index: 1000;
   display: none;
-  a{
-    position: relative;
-  }
-  a:nth-child(0)::after {
-
-    height: 0;
-  }
-  a::after{
-    position: absolute;
-    content: '';
-    width: 0;
-    height: 1px;
-    left: 0;
-    bottom: -1px;
-    background-color: #000;
-    transition: width 0.3s;
-  }
-  a:hover::after{
-    width: 100%;
-    transition: width 0.4s;
-  }
 }
 
 .header-menu li:hover .dropdown-menu {
