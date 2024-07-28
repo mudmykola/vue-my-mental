@@ -7,7 +7,7 @@ module.exports = {
 		"^.+\\.js$": "babel-jest",
 		"^.+\\.ts$": "babel-jest",
 	},
-	transformIgnorePatterns: ["/node_modules/"],
+	transformIgnorePatterns: ["/node_modules/", "/node_modules/(?!axios)"],
 	moduleNameMapper: {
 		"^@/(.*)$": "<rootDir>/src/$1",
 		"\\.(css|less|sass|scss)$": "identity-obj-proxy",

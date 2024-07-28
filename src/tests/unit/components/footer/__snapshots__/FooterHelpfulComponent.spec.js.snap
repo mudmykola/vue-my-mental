@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FooterHelpfulComponent.vue renders correctly 1`] = `
+<div
+  class="footer-helpful"
+>
+  <div
+    class="footer-helpful__inner flex flex-col gap-6"
+  >
+    <h2
+      class="text-[16px] font-bold"
+    >
+      Корисна інформація
+    </h2>
+    <ul
+      class="flex flex-col gap-6"
+    >
+      
+      <li
+        class="flex flex-col gap-6"
+      >
+        <a
+          class="footer-helpful__link text-[14px] text-primary font-normal font-sans"
+          href="tel:0800505201"
+        >
+          0 800 505 201 - Гаряча лінія МОЗ
+        </a>
+      </li>
+      <li
+        class="flex flex-col gap-6"
+      >
+        <a
+          class="footer-helpful__link text-[14px] text-primary font-normal font-sans"
+          href="tel:0800602019"
+        >
+          0 800 60 20 19 - Контакт-центр МОЗ
+        </a>
+      </li>
+      <li
+        class="flex flex-col gap-6"
+      >
+        <a
+          class="footer-helpful__link text-[14px] text-primary font-normal font-sans"
+          href="moz.gov.ua"
+        >
+          moz.gov.ua
+        </a>
+      </li>
+      <li
+        class="flex flex-col gap-6"
+      >
+        <a
+          class="footer-helpful__link text-[14px] text-primary font-normal font-sans"
+        >
+          7333 - Цілодобова гаряча лінія з попередження суїцидів та психологічної підтримки Lifeline Ukraine
+для ветеранів
+        </a>
+      </li>
+      <li
+        class="flex flex-col gap-6"
+      >
+        <a
+          class="footer-helpful__link text-[14px] text-primary font-normal font-sans"
+          href="tel:0800501701"
+        >
+          0–800–501–701 - Всеукраїнський телефон довіри
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+`;
