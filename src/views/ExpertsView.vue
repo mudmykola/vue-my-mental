@@ -4,7 +4,7 @@ import DefaultLayout from "@/layout/DefaultLayout.vue";
 </script>
 
 <template>
-<DefaultLayout>
-<ExpertsComponent/>
-</DefaultLayout>
+  <DefaultLayout>
+    <ExpertsComponent />
+  </DefaultLayout>
 </template>
