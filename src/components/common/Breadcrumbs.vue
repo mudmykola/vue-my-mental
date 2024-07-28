@@ -1,3 +1,26 @@
+<script setup>
+import { onMounted, ref } from "vue";
+import { useRoute } from "vue-router";
+
+const route = useRoute();
+const breadcrumbs = ref([]);
+
+const generateBreadcrumbs = () => {
+	const paths = route.path.split("/").filter((p) => p);
+	const breadcrumbList = paths.map((path, index) => {
+		return {
+			name: route.meta.breadcrumbs[index] || path,
+			link: `/${paths.slice(0, index + 1).join("/")}`,
+		};
+	});
+
+	breadcrumbs.value = [{ name: "Головна", link: "/" }, ...breadcrumbList];
+};
+
+onMounted(() => {
+	generateBreadcrumbs();
+});
+</script>
 <template>
   <nav aria-label="breadcrumb">
     <ol class="flex list-none p-0">
@@ -13,27 +36,3 @@
     </ol>
   </nav>
 </template>
-
-<script setup>
-import { onMounted, ref } from "vue";
-import { useRoute } from "vue-router";
-
-const route = useRoute();
-const breadcrumbs = ref([]);
-
-const generateBreadcrumbs = () => {
-	const paths = route.path.split("/").filter((p) => p);
-	const breadcrumbList = paths.map((path, index) => {
-		return {
-			name: route.meta.breadcrumbs[index] || path,
-			link: "/" + paths.slice(0, index + 1).join("/"),
-		};
-	});
-
-	breadcrumbs.value = [{ name: "Головна", link: "/" }, ...breadcrumbList];
-};
-
-onMounted(() => {
-	generateBreadcrumbs();
-});
-</script>
