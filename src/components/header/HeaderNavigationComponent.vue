@@ -1,43 +1,3 @@
-<template>
-  <div class="header-menu">
-    <ul class="flex items-center gap-5">
-      <li
-          v-for="item in menuItems"
-          :key="item.title"
-          class="header-menu__item"
-          @mouseenter="showDropdown(item)"
-          @mouseleave="hideDropdown(item)"
-      >
-        <a
-            :class="{ active: isActive(item.link) }"
-            :href="item.link"
-            class="text-[14px] text-primary font-bold font-sans"
-        >
-          {{ item.title }}
-        </a>
-        <span
-            v-if="item.title === 'Спеціалістам'"
-            :class="{ 'rotate-180': item.isDropdownVisible }"
-            class="menu-icon ml-1 transition-transform duration-300 ease"
-        >
-          <IconAngelDown />
-        </span>
-        <ul v-if="item.isDropdownVisible" class="dropdown-menu">
-          <li v-for="subItem in item.submenu" :key="subItem.title" class="w-full px-4">
-            <a
-                :class="{ active: isActive(subItem.link) }"
-                :href="subItem.link"
-                class="text-[14px] text-primary font-bold font-sans"
-            >
-              {{ subItem.title }}
-            </a>
-          </li>
-        </ul>
-      </li>
-    </ul>
-  </div>
-</template>
-
 <script setup>
 import IconAngelDown from "@/components/icons/IconAngelDown.vue";
 import { ref } from "vue";
@@ -90,6 +50,50 @@ function isActive(link) {
 }
 </script>
 
+<template>
+  <div class="header-menu">
+    <ul class="flex items-center gap-5">
+      <li
+        v-for="item in menuItems"
+        :key="item.title"
+        class="header-menu__item"
+        @mouseenter="showDropdown(item)"
+        @mouseleave="hideDropdown(item)"
+      >
+        <a
+          :class="{ active: isActive(item.link) }"
+          :href="item.link"
+          class="text-[14px] text-primary font-bold font-sans"
+        >
+          {{ item.title }}
+        </a>
+        <span
+          v-if="item.title === 'Спеціалістам'"
+          :class="{ 'rotate-180': item.isDropdownVisible }"
+          class="menu-icon ml-1 transition-transform duration-300 ease"
+        >
+          <IconAngelDown />
+        </span>
+        <ul v-if="item.isDropdownVisible" class="dropdown-menu">
+          <li
+            v-for="subItem in item.submenu"
+            :key="subItem.title"
+            class="w-full px-4"
+          >
+            <a
+              :class="{ active: isActive(subItem.link) }"
+              :href="subItem.link"
+              class="text-[14px] text-primary font-bold font-sans"
+            >
+              {{ subItem.title }}
+            </a>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </div>
+</template>
+
 <style lang="scss" scoped>
 .header-menu {
   &__item {
@@ -98,7 +102,7 @@ function isActive(link) {
     }
     a::after {
       position: absolute;
-      content: '';
+      content: "";
       width: 0;
       height: 1px;
       left: 0;
@@ -131,7 +135,6 @@ function isActive(link) {
   z-index: 1000;
   display: none;
 }
-
 .header-menu li:hover .dropdown-menu {
   display: block;
 }
