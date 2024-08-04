@@ -1,49 +1,79 @@
 <template>
-  <div class="specialist-card bg-white p-4 rounded-lg shadow-md">
+  <div
+    class="experts-card border border-background bg-white p-4 shadow-md rounded-lg"
+  >
     <div class="text-center">
       <img
         :src="photoUrl"
         alt="Specialist Photo"
         class="w-40 h-40 rounded-full mx-auto mb-4 object-cover"
       />
-      <h3 class="text-xl font-bold">{{ name }}</h3>
-      <p class="text-sm text-gray-600">{{ profession }}</p>
+      <h3 class="text-[1.125rem] font-bold text-left">{{ name }}</h3>
+      <div class="experts-profession text-[0.875rem] text-secondary py-2.5">
+        <p class="text-sm text-gray-600 text-left">{{ profession }}</p>
+        <p class="text-sm text-gray-600 text-left">{{ subProfession }}</p>
+      </div>
     </div>
 
-    <div class="mt-4">
+    <div class="experts-experience text-[0.875rem]">
       <div class="flex items-center mb-2">
         <img
           alt="Experience Icon"
           class="w-5 h-5 mr-2"
-          src="/public/icon/icon-experts-1.png"
+          src="/icon/icon-experts-1.png"
         />
-        <p>{{ experience }}</p>
+        <p>
+          <span class="font-bold">{{ experience }}</span> досвіду
+        </p>
       </div>
-      <div class="flex items-center mb-2">
+      <div class="experts-hours flex items-center text-[0.875rem]">
         <img
           alt="Hours Icon"
           class="w-5 h-5 mr-2"
-          src="/public/icon/icon-experts-2.png"
+          src="/icon/icon-experts-2.png"
         />
-        <p>{{ hours }}</p>
+        <p>
+          <span class="font-bold">{{ hours }}</span> + годин практики
+        </p>
       </div>
-      <div class="flex items-center mb-2">
-        <p class="text-sm text-gray-600">{{ appointment }}</p>
+      <div class="experts-appointment flex items-center mt-2 text-[0.875rem]">
+        <p class="text-sm text-gray-600">
+          {{ appointment }}
+          <span class="text-accent underline">{{ appointmentDate }}</span>
+        </p>
       </div>
-      <div class="flex items-center mb-2">
+      <div class="flex items-center mt-2">
         <div class="flex items-center">
-          <span class="text-yellow-500">★★★★☆</span>
-          <span class="text-gray-600 ml-2">{{ rating }}</span>
+          <span class="text-yellow-500">★★★★★</span>
+          <span class="text-secondary ml-2">{{ rating }}</span>
         </div>
       </div>
-      <div class="flex items-center mb-2">
-        <p class="text-sm text-gray-600">{{ clients }}</p>
+      <div class="flex items-center mt-2">
+        <p class="text-[0.875rem] text-black">{{ clients }}</p>
       </div>
-      <p class="text-sm text-gray-700 mb-4">{{ description }}</p>
-      <p class="text-lg font-bold mb-4">{{ cost }}</p>
-      <div class="flex gap-2">
-        <button class="btn-primary" @click="bookAppointment">Записатися</button>
-        <button class="btn-secondary" @click="viewDetails">Детальніше</button>
+      <p class="text-[0.938rem] text-secondary mt-3.5">{{ description }}</p>
+      <div class="experts-costs flex items-center gap-2 mt-4 mb-3">
+        <h2 class="text-[1.25rem] font-bold text-accent">{{ cost }}</h2>
+        <p
+          class="text-[0.875rem] border border-background py-1 px-2 rounded font-normal"
+        >
+          {{ time }} хв
+        </p>
+      </div>
+
+      <div class="flex flex-col gap-2">
+        <button
+          class="bg-accent rounded-xl py-4 px-2 text-white font-bold text-[1rem]"
+          @click="bookAppointment"
+        >
+          Записатися
+        </button>
+        <button
+          class="bg-background rounded-xl py-4 px-2 text-primary font-bold text-[1rem]"
+          @click="viewDetails"
+        >
+          Детальніше
+        </button>
       </div>
     </div>
   </div>
@@ -56,38 +86,19 @@ const props = defineProps({
 	photoUrl: String,
 	name: String,
 	profession: String,
+	subProfession: String,
 	experience: String,
 	hours: String,
 	appointment: String,
+	appointmentDate: String,
 	rating: String,
 	clients: String,
 	description: String,
 	cost: String,
+	time: String,
 });
 
 const bookAppointment = () => {};
 
 const viewDetails = () => {};
 </script>
-
-<style scoped>
-.specialist-card {
-  border: 1px solid #e5e7eb;
-}
-.btn-primary {
-  background-color: #3b82f6;
-  color: white;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.375rem;
-  cursor: pointer;
-}
-.btn-secondary {
-  background-color: #f3f4f6;
-  color: #3b82f6;
-  padding: 0.5rem 1rem;
-  border: none;
-  border-radius: 0.375rem;
-  cursor: pointer;
-}
-</style>

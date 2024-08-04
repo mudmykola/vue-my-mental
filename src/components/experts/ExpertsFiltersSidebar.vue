@@ -61,10 +61,8 @@ const applyFilters = () => {
           type="text"
       />
     </div>
-
-    <!-- Формат консультації -->
     <h2
-        class="text-xl font-semibold mb-4 cursor-pointer flex justify-between items-center"
+        class="text-[1rem] py-3.5 px-2 px- bg-white rounded mb-4 cursor-pointer flex justify-between items-center"
         @click="toggleFormatFilters"
     >
       {{ formatFiltersTitle }}
@@ -72,7 +70,7 @@ const applyFilters = () => {
     </h2>
 
     <div v-if="formatFiltersOpen">
-      <div class="mb-4">
+      <div class="mb-4 bg-white">
         <div class="mt-2 space-y-2">
           <div class="flex items-center">
             <input
@@ -103,14 +101,14 @@ const applyFilters = () => {
         </div>
       </div>
 
-      <div class="mb-4">
+      <div class="mb-4 text-[1rem] py-3.5 px-2 px- bg-white rounded">
         <label class="block text-sm font-medium text-gray-700" for="city">
           {{ cityLabel }}
         </label>
         <select
             id="city"
             v-model="selectedCity"
-            class="mt-1 p-2 w-full border rounded"
+            class="mt-1 p-2 w-full border rounded text-[1rem] py-3.5 px-2 px- bg-white rounded"
         >
           <option value="">{{ allCitiesOption }}</option>
           <option v-for="city in cities" :key="city" :value="city">
@@ -119,7 +117,7 @@ const applyFilters = () => {
         </select>
       </div>
 
-      <div class="mb-4">
+      <div class="mb-4 text-[1rem] py-3.5 px-2 px- bg-white rounded">
         <div class="flex items-center">
           <input
               id="both"
@@ -132,9 +130,7 @@ const applyFilters = () => {
           </label>
         </div>
       </div>
-
-      <!-- Кнопки для Формат консультації -->
-      <div class="flex gap-3">
+      <div class="flex gap-3 ">
         <BaseButton
             :text="clearButtonLabel"
             variant="secondary"
@@ -147,10 +143,8 @@ const applyFilters = () => {
         />
       </div>
     </div>
-
-    <!-- Мова консультації -->
     <h2
-        class="text-xl font-semibold mb-4 cursor-pointer flex justify-between items-center"
+        class="text-xl font-semibold mb-4 cursor-pointer flex justify-between items-center text-[1rem] py-3.5 px-2 px- bg-white rounded"
         @click="toggleLanguageFilters"
     >
       {{ languageFiltersTitle }}
@@ -158,7 +152,7 @@ const applyFilters = () => {
     </h2>
 
     <div v-if="languageFiltersOpen">
-      <div class="mb-4">
+      <div class="mb-4 text-[1rem] py-3.5 px-2 px- bg-white rounded">
         <div class="mt-2 space-y-2">
           <div class="flex items-center">
             <input
@@ -188,8 +182,6 @@ const applyFilters = () => {
           </div>
         </div>
       </div>
-
-      <!-- Кнопки для Мова консультації -->
       <div class="flex gap-3">
         <BaseButton
             :text="clearButtonLabel"
