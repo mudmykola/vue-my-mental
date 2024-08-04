@@ -10,7 +10,7 @@ import ExpertsFiltersSidebar from "@/components/experts/ExpertsFiltersSidebar.vu
       <div class="experts-inner pb-10 pt-5">
         <ExpertsBannerComponent />
         <div class="experts-inner__box flex justify-between">
-          <div class="experts-inner__filter w-[45%] p-[1rem]">
+          <div class="experts-inner__filter w-[59%]">
             <ExpertsFiltersSidebar />
           </div>
           <div class="experts-inner__collection">
