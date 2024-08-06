@@ -98,7 +98,11 @@ const props = defineProps({
 	time: String,
 });
 
-const bookAppointment = () => {};
+const bookAppointment = () => {
+	console.log(`Open booking form for ${props.name}`);
+};
 
-const viewDetails = () => {};
+const viewDetails = () => {
+	console.log(`Open details modal for ${props.name}`);
+};
 </script>

@@ -1,0 +1,34 @@
+[
+	{
+		"id": 4,
+		"photoUrl": "/images/experts-avatar-4.png",
+		"name": "Петро Іванов",
+		"profession": "Психолог",
+		"subProfession": "Психотерапевт",
+		"experience": "5 років",
+		"hours": "2 500",
+		"appointment": "Запис",
+		"appointmentDate": "з 18 березня, 08:00",
+		"rating": "3 відгуки",
+		"clients": "20 клієнтів - 30 сеансів",
+		"description": "Я допоможу тобі знайти баланс і гармонію в житті...",
+		"cost": "1 200$",
+		"time": "60"
+	},
+	{
+		"id": 5,
+		"photoUrl": "/images/experts-avatar-5.png",
+		"name": "Марія Сидоренко",
+		"profession": "Психотерапевт",
+		"subProfession": "Сімейний психолог",
+		"experience": "12 років",
+		"hours": "8 000",
+		"appointment": "Запис",
+		"appointmentDate": "з 19 березня, 09:00",
+		"rating": "5 відгуків",
+		"clients": "30 клієнтів - 50 сеансів",
+		"description": "Запрошую на консультації для вирішення сімейних питань...",
+		"cost": "2 000$",
+		"time": "60"
+	}
+]

@@ -2,82 +2,75 @@
   <div class="experts-list">
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
       <ExpertsCartComponent
-        v-for="specialist in experts"
+        v-for="specialist in expertsBeforeBanner"
         :key="specialist.id"
-        :appointment="specialist.appointment"
-        :appointment-date="specialist.appointmentDate"
-        :clients="specialist.clients"
-        :cost="specialist.cost"
-        :description="specialist.description"
-        :experience="specialist.experience"
-        :hours="specialist.hours"
-        :name="specialist.name"
-        :photoUrl="specialist.photoUrl"
-        :profession="specialist.profession"
-        :rating="specialist.rating"
-        :sub-profession="specialist.subProfession"
-        :time="specialist.time"
+        :appointment="String(specialist.appointment || '')"
+        :appointment-date="String(specialist.appointmentDate || '')"
+        :clients="String(specialist.clients || '')"
+        :cost="String(specialist.cost || '')"
+        :description="String(specialist.description || '')"
+        :experience="String(specialist.experience || '')"
+        :hours="String(specialist.hours || '')"
+        :name="String(specialist.name || '')"
+        :photoUrl="String(specialist.photoUrl || '')"
+        :profession="String(specialist.profession || '')"
+        :rating="String(specialist.rating || '')"
+        :sub-profession="String(specialist.subProfession || '')"
+        :time="String(specialist.time || '')"
       />
     </div>
+    <div class="experts-test__banner my-8">
+      <ExpertsTestBanner />
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
+      <ExpertsCartComponent
+        v-for="specialist in expertsAfterBanner"
+        :key="specialist.id"
+        :appointment="String(specialist.appointment || '')"
+        :appointment-date="String(specialist.appointmentDate || '')"
+        :clients="String(specialist.clients || '')"
+        :cost="String(specialist.cost || '')"
+        :description="String(specialist.description || '')"
+        :experience="String(specialist.experience || '')"
+        :hours="String(specialist.hours || '')"
+        :name="String(specialist.name || '')"
+        :photoUrl="String(specialist.photoUrl || '')"
+        :profession="String(specialist.profession || '')"
+        :rating="String(specialist.rating || '')"
+        :sub-profession="String(specialist.subProfession || '')"
+        :time="String(specialist.time || '')"
+      />
+    </div>
+
     <div class="pagination mt-6 flex justify-center"></div>
   </div>
 </template>
 
 <script setup>
 import ExpertsCartComponent from "@/components/experts/ExpertsCartComponent.vue";
-import { ref } from "vue";
+import ExpertsTestBanner from "@/components/experts/ExpertsTestBanner.vue";
+import { onMounted, ref } from "vue";
 
-const experts = ref([
-	{
-		id: 1,
-		photoUrl: "/images/experts-avatar-1.png",
-		name: "Іван Петренко",
-		profession: "Психолог",
-		subProfession: "Психолог-консультант",
-		experience: "3 роки",
-		hours: "1 000",
-		appointment: "Запис ",
-		appointmentDate: "з 16 березня, 07:00",
-		rating: "2 відгука",
-		clients: "15 клієнтів - 22 сеанси",
-		description:
-			"Запрошую на зустріч всіх хто заплутався та в кого опускаються руки...",
-		cost: "1 000$",
-		time: "60",
-	},
-	{
-		id: 2,
-		photoUrl: "/images/experts-avatar-2.png",
-		name: "Ольга Скиба",
-		profession: "Психотерапевт",
-		subProfession: "Психолог-консультант",
-		experience: "10 років",
-		hours: "6 000",
-		appointment: "Запис ",
-		appointmentDate: "з 16 березня, 07:00",
-		rating: "2 відгука",
-		clients: "15 клієнтів - 22 сеанси",
-		description:
-			"Я допоможу тобі зібрати себе в купу і почати вдихати життя на повні груди, не боячись нічого. Разом...",
-		cost: "3 000$",
-		time: "60",
-	},
-	{
-		id: 3,
-		photoUrl: "/images/experts-avatar-3.png",
-		name: "Анна Садова",
-		profession: "Психолог",
-		subProfession: "Психолог-консультант",
-		experience: "8 років",
-		hours: "4 000",
-		appointment: "Запис ",
-		appointmentDate: "з 16 березня, 07:00",
-		rating: "2 відгука",
-		clients: "15 клієнтів - 22 сеанси",
-		description:
-			"Знання та людяність – ключ до вирішення будь-яких задач та негараздів. Психолог – це лише...",
-		cost: "800$",
-		time: "60",
-	},
-]);
+const expertsBeforeBanner = ref([]);
+const expertsAfterBanner = ref([]);
+
+const loadExpertsData = async () => {
+	try {
+		const responseBefore = await fetch("/data/expertsBeforeBanner.json");
+		if (!responseBefore.ok)
+			throw new Error(`HTTP error! status: ${responseBefore.status}`);
+		expertsBeforeBanner.value = await responseBefore.json();
+
+		const responseAfter = await fetch("/data/expertsAfterBanner.json");
+		if (!responseAfter.ok)
+			throw new Error(`HTTP error! status: ${responseAfter.status}`);
+		expertsAfterBanner.value = await responseAfter.json();
+	} catch (error) {
+		console.error("Error fetching experts data:", error);
+	}
+};
+
+onMounted(() => {
+	loadExpertsData();
+});
 </script>
