@@ -1,6 +1,6 @@
 <script setup>
 import BaseButton from "@/components/ui/BaseButton.vue";
-import { ref } from "vue";
+import { computed, ref } from "vue";
 
 const searchPlaceholder = ref("Шукати по імені чи прізвищу");
 const formatFiltersTitle = ref("Формат консультації");
@@ -22,6 +22,25 @@ const bothFit = ref(false);
 const formatFiltersOpen = ref(false);
 const languageFiltersOpen = ref(false);
 const language = ref("ukrainian");
+const tagsFilter = ref([]);
+
+const experts = ref([]);
+const filteredExperts = computed(() => {
+	return experts.value.filter((expert) => {
+		const matchesSearch = expert.name
+			.toLowerCase()
+			.includes(searchQuery.value.toLowerCase());
+		const matchesFormat =
+			consultationFormat.value === "both" ||
+			expert.consultationFormat === consultationFormat.value;
+		const matchesCity =
+			selectedCity.value === "" || expert.city === selectedCity.value;
+		const matchesTags = tagsFilter.value.every((tag) =>
+			expert.tags.includes(tag),
+		);
+		return matchesSearch && matchesFormat && matchesCity && matchesTags;
+	});
+});
 
 const toggleFormatFilters = () => {
 	formatFiltersOpen.value = !formatFiltersOpen.value;
@@ -47,6 +66,7 @@ const applyFilters = () => {
 	console.log("Вибране місто:", selectedCity.value);
 	console.log("Обидва підходять:", bothFit.value);
 	console.log("Мова консультації:", language.value);
+	console.log("Фільтри тегів:", tagsFilter.value);
 };
 </script>
 

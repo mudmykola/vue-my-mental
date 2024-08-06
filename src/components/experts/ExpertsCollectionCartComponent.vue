@@ -1,3 +1,56 @@
+<script setup>
+import ExpertsCartComponent from "@/components/experts/ExpertsCartComponent.vue";
+import ExpertsTestBanner from "@/components/experts/ExpertsTestBanner.vue";
+import { commonProps } from "@/utils/sharedProps.js";
+import { defineEmits, onMounted, ref, watch } from "vue";
+
+const props = defineProps(commonProps);
+
+const expertsBeforeBanner = ref([]);
+const expertsAfterBanner = ref([]);
+
+const countBeforeBanner = ref(0);
+const countAfterBanner = ref(0);
+
+const emit = defineEmits(["update-counts"]);
+
+const loadExpertsData = async () => {
+	try {
+		const responseBefore = await fetch("/data/expertsBeforeBanner.json");
+		if (!responseBefore.ok)
+			throw new Error(`HTTP error! status: ${responseBefore.status}`);
+		const dataBefore = await responseBefore.json();
+		expertsBeforeBanner.value = dataBefore;
+		countBeforeBanner.value = dataBefore.length;
+
+		const responseAfter = await fetch("/data/expertsAfterBanner.json");
+		if (!responseAfter.ok)
+			throw new Error(`HTTP error! status: ${responseAfter.status}`);
+		const dataAfter = await responseAfter.json();
+		expertsAfterBanner.value = dataAfter;
+		countAfterBanner.value = dataAfter.length;
+
+		emit("update-counts", {
+			countBefore: countBeforeBanner.value,
+			countAfter: countAfterBanner.value,
+		});
+	} catch (error) {
+		console.error("Error fetching experts data:", error);
+	}
+};
+
+watch([countBeforeBanner, countAfterBanner], () => {
+	emit("update-counts", {
+		countBefore: countBeforeBanner.value,
+		countAfter: countAfterBanner.value,
+	});
+});
+
+onMounted(() => {
+	loadExpertsData();
+});
+</script>
+
 <template>
   <div class="experts-list">
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
@@ -45,32 +98,3 @@
     <div class="pagination mt-6 flex justify-center"></div>
   </div>
 </template>
-
-<script setup>
-import ExpertsCartComponent from "@/components/experts/ExpertsCartComponent.vue";
-import ExpertsTestBanner from "@/components/experts/ExpertsTestBanner.vue";
-import { onMounted, ref } from "vue";
-
-const expertsBeforeBanner = ref([]);
-const expertsAfterBanner = ref([]);
-
-const loadExpertsData = async () => {
-	try {
-		const responseBefore = await fetch("/data/expertsBeforeBanner.json");
-		if (!responseBefore.ok)
-			throw new Error(`HTTP error! status: ${responseBefore.status}`);
-		expertsBeforeBanner.value = await responseBefore.json();
-
-		const responseAfter = await fetch("/data/expertsAfterBanner.json");
-		if (!responseAfter.ok)
-			throw new Error(`HTTP error! status: ${responseAfter.status}`);
-		expertsAfterBanner.value = await responseAfter.json();
-	} catch (error) {
-		console.error("Error fetching experts data:", error);
-	}
-};
-
-onMounted(() => {
-	loadExpertsData();
-});
-</script>
