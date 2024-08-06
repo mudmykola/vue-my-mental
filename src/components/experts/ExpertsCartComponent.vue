@@ -59,8 +59,13 @@
         >
           {{ time }} хв
         </p>
-      </div>
 
+      </div>
+      <div class="flex flex-wrap gap-2 mt-4">
+      <span v-for="tag in tags" :key="tag" class="tag">
+        {{ tag }}
+      </span>
+      </div>
       <div class="flex flex-col gap-2">
         <button
           class="bg-accent rounded-xl py-4 px-2 text-white font-bold text-[1rem]"
@@ -96,6 +101,7 @@ const props = defineProps({
 	description: String,
 	cost: String,
 	time: String,
+	tags: Array,
 });
 
 const bookAppointment = () => {
