@@ -164,7 +164,7 @@ const applyFilters = () => {
       </div>
     </div>
     <h2
-        class="text-xl font-semibold mb-4 cursor-pointer flex justify-between items-center text-[1rem] py-3.5 px-2 px- bg-white rounded"
+        class="text-[1rem] py-3.5 px-2 px- bg-white rounded mb-4 cursor-pointer flex justify-between items-center"
         @click="toggleLanguageFilters"
     >
       {{ languageFiltersTitle }}
