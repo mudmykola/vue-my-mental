@@ -2,12 +2,30 @@
 import ExpertsCartComponent from "@/components/experts/ExpertsCartComponent.vue";
 import ExpertsTestBanner from "@/components/experts/ExpertsTestBanner.vue";
 import { commonProps } from "@/utils/sharedProps.js";
-import { defineEmits, onMounted, ref, watch } from "vue";
+import { computed, defineEmits, onMounted, ref, watch } from "vue";
 
 const props = defineProps(commonProps);
 
 const expertsBeforeBanner = ref([]);
 const expertsAfterBanner = ref([]);
+
+const allExperts = computed(() => [
+	...expertsBeforeBanner.value,
+	...expertsAfterBanner.value,
+]);
+
+const currentPage = ref(1);
+const itemsPerPage = 12;
+
+const totalPages = computed(() =>
+	Math.ceil(allExperts.value.length / itemsPerPage),
+);
+
+const paginatedExperts = computed(() => {
+	const start = (currentPage.value - 1) * itemsPerPage;
+	const end = start + itemsPerPage;
+	return allExperts.value.slice(start, end);
+});
 
 const countBeforeBanner = ref(0);
 const countAfterBanner = ref(0);
@@ -49,6 +67,10 @@ watch([countBeforeBanner, countAfterBanner], () => {
 onMounted(() => {
 	loadExpertsData();
 });
+
+const changePage = (page) => {
+	currentPage.value = page;
+};
 </script>
 
 <template>
@@ -95,6 +117,24 @@ onMounted(() => {
       />
     </div>
 
-    <div class="pagination mt-6 flex justify-center"></div>
+    <div class="pagination mt-6 flex justify-center">
+      <button
+          v-for="page in totalPages"
+          :key="page"
+          :class="['px-4 py-2 mx-1 border', { 'bg-blue-500 text-white': currentPage === page }]"
+          class="bg-primary cursor-pointer text-white rounded"
+          @click="changePage(page)"
+      >
+        {{ page }}
+      </button>
+    </div>
   </div>
 </template>
+
+<style scoped>
+
+
+.pagination button:hover:not(.bg-blue-500) {
+  background-color: #CA6C46;
+}
+</style>
