@@ -77,21 +77,21 @@ const changePage = (page) => {
   <div class="experts-list">
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
       <ExpertsCartComponent
-        v-for="specialist in expertsBeforeBanner"
-        :key="specialist.id"
-        :appointment="String(specialist.appointment || '')"
-        :appointment-date="String(specialist.appointmentDate || '')"
-        :clients="String(specialist.clients || '')"
-        :cost="String(specialist.cost || '')"
-        :description="String(specialist.description || '')"
-        :experience="String(specialist.experience || '')"
-        :hours="String(specialist.hours || '')"
-        :name="String(specialist.name || '')"
-        :photoUrl="String(specialist.photoUrl || '')"
-        :profession="String(specialist.profession || '')"
-        :rating="String(specialist.rating || '')"
-        :sub-profession="String(specialist.subProfession || '')"
-        :time="String(specialist.time || '')"
+          v-for="specialist in expertsBeforeBanner"
+          :key="specialist.id"
+          :appointment="String(specialist.appointment || '')"
+          :appointment-date="String(specialist.appointmentDate || '')"
+          :clients="String(specialist.clients || '')"
+          :cost="String(specialist.cost || '')"
+          :description="String(specialist.description || '')"
+          :experience="String(specialist.experience || '')"
+          :hours="String(specialist.hours || '')"
+          :name="String(specialist.name || '')"
+          :photoUrl="String(specialist.photoUrl || '')"
+          :profession="String(specialist.profession || '')"
+          :rating="String(specialist.rating || '')"
+          :sub-profession="String(specialist.subProfession || '')"
+          :time="String(specialist.time || '')"
       />
     </div>
     <div class="experts-test__banner my-8">
@@ -99,21 +99,21 @@ const changePage = (page) => {
     </div>
     <div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 gap-2">
       <ExpertsCartComponent
-        v-for="specialist in expertsAfterBanner"
-        :key="specialist.id"
-        :appointment="String(specialist.appointment || '')"
-        :appointment-date="String(specialist.appointmentDate || '')"
-        :clients="String(specialist.clients || '')"
-        :cost="String(specialist.cost || '')"
-        :description="String(specialist.description || '')"
-        :experience="String(specialist.experience || '')"
-        :hours="String(specialist.hours || '')"
-        :name="String(specialist.name || '')"
-        :photoUrl="String(specialist.photoUrl || '')"
-        :profession="String(specialist.profession || '')"
-        :rating="String(specialist.rating || '')"
-        :sub-profession="String(specialist.subProfession || '')"
-        :time="String(specialist.time || '')"
+          v-for="specialist in expertsAfterBanner"
+          :key="specialist.id"
+          :appointment="String(specialist.appointment || '')"
+          :appointment-date="String(specialist.appointmentDate || '')"
+          :clients="String(specialist.clients || '')"
+          :cost="String(specialist.cost || '')"
+          :description="String(specialist.description || '')"
+          :experience="String(specialist.experience || '')"
+          :hours="String(specialist.hours || '')"
+          :name="String(specialist.name || '')"
+          :photoUrl="String(specialist.photoUrl || '')"
+          :profession="String(specialist.profession || '')"
+          :rating="String(specialist.rating || '')"
+          :sub-profession="String(specialist.subProfession || '')"
+          :time="String(specialist.time || '')"
       />
     </div>
 
@@ -121,8 +121,8 @@ const changePage = (page) => {
       <button
           v-for="page in totalPages"
           :key="page"
-          :class="['px-4 py-2 mx-1 border', { 'bg-blue-500 text-white': currentPage === page }]"
-          class="bg-primary cursor-pointer text-white rounded"
+          :class="['px-4 py-2 mx-1 border cursor-pointer rounded',
+                    currentPage === page ? 'bg-blue-500 text-white' : 'bg-primary text-white hover:bg-ca6c46']"
           @click="changePage(page)"
       >
         {{ page }}
@@ -132,9 +132,20 @@ const changePage = (page) => {
 </template>
 
 <style scoped>
+.pagination button {
+  cursor: pointer;
+}
 
-
-.pagination button:hover:not(.bg-blue-500) {
+.bg-primary {
   background-color: #CA6C46;
+}
+
+.pagination button.bg-blue-500 {
+  background-color: #19453F;
+  color: white;
+}
+
+.pagination button.bg-primary:hover {
+  background-color: #b85b3b;
 }
 </style>
