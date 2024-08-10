@@ -10,7 +10,7 @@ const expertsTestTitle = ref(
 <template>
   <div class="experts-test bg-[#19453F] text-white text-center rounded-xl py-12">
     <h2 class="mb-8 text-xl font-bold w-[39rem] m-auto"> {{ expertsTestTitle }}</h2>
-    <BaseButton href="/" text="Пройти тест" variant="white" />
+    <BaseButton href="/tests" text="Пройти тест" variant="white" />
   </div>
 </template>
 
